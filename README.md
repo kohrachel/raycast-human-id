@@ -1,6 +1,6 @@
 # Human ID
 
-A Raycast extension that generates unique, human-readable, kebab-case IDs for git branch names, inspired by [human-id](https://github.com/RienNeVaPlus/human-id).
+Raycast extension that generates unique, human-readable, kebab-case IDs. Inspired by [human-id](https://github.com/RienNeVaPlus/human-id).
 
 ```
 ripe-llama-acts                      3 words
