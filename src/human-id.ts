@@ -5,7 +5,7 @@ export const MIN_WORDS = 3;
 export const MAX_WORDS = 5;
 export const DEFAULT_WORDS = 4;
 
-// Masks for the power-of-two list sizes (see words.ts).
+// Length of each array minus one, lengths are powers of 2.
 const ADJ = 511;
 const NOUN = 511;
 const VERB = 255;
@@ -28,13 +28,6 @@ function random32(): number {
 
 /**
  * Generate a kebab-cased, human-readable ID.
- *
- *   3 words: adjective-noun-verb                    2^26 ≈ 67 million
- *   4 words: adjective-noun-verb-adverb             2^33 ≈ 8.6 billion
- *   5 words: adjective-adjective-noun-verb-adverb   2^42 ≈ 4.4 trillion
- *
- * One 32-bit random value covers adjective (9 bits), noun (9) and verb (8);
- * a second one covers the adverb (7) and the extra adjective (9).
  */
 export function humanId(wordCount: number = DEFAULT_WORDS): string {
   const a = random32();
