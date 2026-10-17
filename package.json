@@ -4,7 +4,7 @@
   "title": "Human ID",
   "description": "Generate unique, human-readable kebab-case IDs for git branch names",
   "icon": "icon.png",
-  "author": "rachel",
+  "author": "rachelkoh",
   "categories": [
     "Developer Tools"
   ],
@@ -19,11 +19,11 @@
         {
           "name": "words",
           "type": "dropdown",
-          "placeholder": "Words",
+          "placeholder": "Words (default 4)",
           "required": false,
           "data": [
             {
-              "title": "4 words (default)",
+              "title": "4 words",
               "value": "4"
             },
             {
@@ -40,7 +40,7 @@
     }
   ],
   "dependencies": {
-    "@raycast/api": "^2.7.3"
+    "@raycast/api": "^2.8.2"
   },
   "devDependencies": {
     "@raycast/eslint-config": "^2.2.0",
@@ -57,6 +57,7 @@
     "fix-lint": "ray lint --fix",
     "lint": "ray lint",
     "test": "tsx --test test/*.test.ts",
-    "bench": "tsx test/bench.ts"
+    "bench": "tsx test/bench.ts",
+    "publish": "npx @raycast/api@latest publish"
   }
 }
