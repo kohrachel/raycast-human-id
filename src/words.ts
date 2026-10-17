@@ -1,6 +1,6 @@
 /**
  * Hardcoded word lists. Words are lowercase a-z only.
- * 
+ *
  * Every list length is a power of two so an index can be
  * taken straight from random bits with a mask: no modulo bias and no hashing,
  * just an O(1) array read.
