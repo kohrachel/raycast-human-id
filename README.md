@@ -16,10 +16,9 @@ Run **Generate Human ID**, optionally pick a word count (3–5). The ID is copie
 
 ## How it works
 
-- Word lists are hardcoded arrays (`src/words.ts`): 512 adjectives, 512 nouns, 256 verbs, 128 adverbs. Words are lowercase a–z.
-- Every list length is a power of two. Each index is a bit mask over random bits, so a lookup is a single O(1) array read with no modulo bias.
-- Each ID comes from a single 64-bit random value (`BigUint64Array`), sliced into word indices with shifts and masks. Random values come from `crypto.getRandomValues`.
-- Generation is O(1): a fixed number of array reads and one template string. It takes about 100–170 ns per call (`npm run bench`).
+- Words are lowercase hardcoded arrays (`src/words.ts`): 512 adjectives, 512 nouns, 256 verbs, 128 adverbs.
+- A random 64-bit value is used as an index into word indices, therefore generation is O(1).
+- Each call takes about 160–270 ns (`npm run bench`).
 
 ## Uniqueness
 
