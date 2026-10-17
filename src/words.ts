@@ -1,10 +1,9 @@
 /**
- * Hardcoded word lists. Every list length is a power of two so an index can be
+ * Hardcoded word lists. Words are lowercase a-z only.
+ * 
+ * Every list length is a power of two so an index can be
  * taken straight from random bits with a mask: no modulo bias and no hashing,
- * just an O(1) array read. Words are lowercase a-z only, so any combination
- * joined with "-" is a valid git ref name.
- *
- * Sizes are checked by test/human-id.test.ts; keep them exact powers of two.
+ * just an O(1) array read.
  */
 
 // 512 adjectives (2^9)
@@ -1301,14 +1300,14 @@ export const verbs: readonly string[] = [
 
 // 128 adverbs (2^7)
 export const adverbs: readonly string[] = [
-  "ably",
   "actively",
-  "barely",
+  "amazingly",
   "blissfully",
   "boldly",
   "bravely",
   "briefly",
   "brightly",
+  "brilliantly",
   "briskly",
   "busily",
   "calmly",
@@ -1411,8 +1410,8 @@ export const adverbs: readonly string[] = [
   "slowly",
   "smoothly",
   "softly",
-  "solemnly",
   "speedily",
+  "splendidly",
   "steadily",
   "strongly",
   "sweetly",
